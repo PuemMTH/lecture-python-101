@@ -1,6 +1,6 @@
 ---
 theme: geist
-colorSchema: auto
+colorSchema: light
 title: Function
 author: Puem
 transition: fade
@@ -8,6 +8,7 @@ lineNumbers: true
 monaco: true
 htmlAttrs:
   lang: th
+routeAlias: functions
 layout: cover
 class: concept
 ---
@@ -191,11 +192,26 @@ print(f"BMI: {calculate_bmi(68, 1.72):.2f}")
 
 ---
 layout: center
-class: concept
+class: summary-slide
 ---
 
-# Session 2 สรุป
+<div class="eyebrow">Session 02 · Recap</div>
 
-<div class="pipeline">
-  <div><code>def</code></div><div>Parameter</div><div><code>return</code></div><div><code>assert</code></div>
+# จากขั้นตอนที่ซ้ำ<br>สู่ Function ที่ทดสอบได้
+
+<div class="summary-map">
+  <div class="summary-step">
+    <span>01</span><strong><code>def</code></strong><small>ตั้งชื่อให้ขั้นตอนหนึ่งเรื่อง</small>
+  </div>
+  <div class="summary-step">
+    <span>02</span><strong>Parameter</strong><small>ระบุข้อมูลที่ function ต้องใช้</small>
+  </div>
+  <div class="summary-step">
+    <span>03</span><strong><code>return</code></strong><small>ส่งผลลัพธ์กลับไปใช้ต่อ</small>
+  </div>
+  <div class="summary-step">
+    <span>04</span><strong><code>assert</code></strong><small>ตรวจ contract ระหว่างพัฒนา</small>
 </div>
+</div>
+
+<div class="summary-result"><span>MENTAL MODEL</span> <code>output = f(input)</code> <span class="summary-copy">= แยกงานเป็นหน่วยที่เรียกซ้ำและตรวจสอบได้</span></div>

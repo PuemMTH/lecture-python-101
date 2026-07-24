@@ -1,6 +1,6 @@
 ---
 theme: geist
-colorSchema: auto
+colorSchema: light
 title: Loop และการประมวลผล Collection
 author: Puem
 transition: fade
@@ -8,11 +8,12 @@ lineNumbers: true
 monaco: true
 htmlAttrs:
   lang: th
+routeAlias: loops
 layout: cover
 class: concept
 ---
 
-<div class="eyebrow">Python พื้นฐาน · Session 05</div>
+<div class="eyebrow">Python พื้นฐาน · Session 06</div>
 
 # Loop และการประมวลผล Collection
 
@@ -214,6 +215,9 @@ while True:
 
 # Outer loop เป็นแถว · Inner loop เป็นคอลัมน์
 
+<div class="grid2 nested-loop-definition">
+  <div>
+
 ```python {monaco-run} {autorun:false}
 for row in range(1, 4):
     line = ""
@@ -222,7 +226,16 @@ for row in range(1, 4):
     print(line)
 ```
 
-<div class="takeaway"><p>Nested loop เหมาะกับตาราง ลวดลาย และข้อมูลสองมิติ</p></div>
+<div class="loop-legend">
+  <span class="outer-loop">Outer</span> เปลี่ยนแถว
+  <span class="inner-loop">Inner</span> เดินทุกคอลัมน์
+</div>
+
+  </div>
+  <img class="concept-image" src="./assets/nested-loop-matrix.png" alt="แผนภาพ nested loop: outer loop เลื่อนผ่านสามแถว และ inner loop เดินผ่านสี่คอลัมน์ในแต่ละแถว">
+</div>
+
+<div class="takeaway"><p>Inner loop ทำงานครบทุกคอลัมน์ ก่อน Outer loop เปลี่ยนไปแถวถัดไป</p></div>
 
 ---
 
@@ -274,11 +287,26 @@ print(score_by_id)
 
 ---
 layout: center
-class: concept
+class: summary-slide
 ---
 
-# Session 5 สรุป
+<div class="eyebrow">Session 06 · Recap</div>
 
-<div class="pipeline">
-  <div><code>for</code></div><div><code>while</code></div><div>Comprehension</div><div>Aggregate</div>
+# จากข้อมูลหลายรายการ<br>สู่คำตอบที่คำนวณได้
+
+<div class="summary-map">
+  <div class="summary-step">
+    <span>01</span><strong><code>for</code></strong><small>ทำงานกับสมาชิกทีละรายการ</small>
+  </div>
+  <div class="summary-step">
+    <span>02</span><strong><code>while</code></strong><small>ทำซ้ำตราบใดที่เงื่อนไขยังจริง</small>
+  </div>
+  <div class="summary-step">
+    <span>03</span><strong>Transform</strong><small>กรองหรือแปลง collection</small>
+  </div>
+  <div class="summary-step">
+    <span>04</span><strong>Aggregate</strong><small>สรุปหลายค่าเป็นผลลัพธ์เดียว</small>
 </div>
+</div>
+
+<div class="summary-result"><span>MENTAL MODEL</span> <code>collection → loop → result</code> <span class="summary-copy">= ประมวลผลข้อมูลด้วยกฎเดียวกันอย่างเป็นระบบ</span></div>

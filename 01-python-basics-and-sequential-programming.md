@@ -1,6 +1,6 @@
 ---
 theme: geist
-colorSchema: auto
+colorSchema: light
 title: Python เบื้องต้นและโปรแกรมแบบลำดับ
 author: Puem
 transition: fade
@@ -8,6 +8,7 @@ lineNumbers: true
 monaco: true
 htmlAttrs:
   lang: th
+routeAlias: basics
 layout: cover
 class: concept
 ---
@@ -184,12 +185,26 @@ print(f"Total:    {net_total:,.2f} baht")
 
 ---
 layout: center
-class: concept
+class: summary-slide
 ---
 
-# Session 1 สรุป
+<div class="eyebrow">Session 01 · Recap</div>
 
-<div class="pipeline">
-  <div>Data Types</div><div>Variable</div><div>
-Equation</div><div>Input / Output</div>
+# จากข้อมูลดิบ<br>สู่ผลลัพธ์ของโปรแกรม
+
+<div class="summary-map">
+  <div class="summary-step">
+    <span>01</span><strong>Data Types</strong><small>กำหนดความหมายและ operation ที่ใช้ได้</small>
+  </div>
+  <div class="summary-step">
+    <span>02</span><strong>Variable</strong><small>ตั้งชื่อและเก็บค่าระหว่างทำงาน</small>
+  </div>
+  <div class="summary-step">
+    <span>03</span><strong>Expression</strong><small>นำค่ามาคำนวณตามลำดับ operator</small>
+  </div>
+  <div class="summary-step">
+    <span>04</span><strong>Input / Output</strong><small>รับข้อมูล แปลงชนิด และแสดงผล</small>
 </div>
+</div>
+
+<div class="summary-result"><span>MENTAL MODEL</span> <code>input → process → output</code> <span class="summary-copy">= โครงสร้างพื้นฐานของโปรแกรม</span></div>

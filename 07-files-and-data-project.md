@@ -1,20 +1,21 @@
 ---
 theme: geist
-colorSchema: auto
-title: ไฟล์ ข้อผิดพลาด และโปรเจกต์ข้อมูล
+colorSchema: light
+title: ไฟล์และโปรเจกต์ข้อมูล
 author: Puem
 transition: fade
 lineNumbers: true
 monaco: true
 htmlAttrs:
   lang: th
+routeAlias: files-data
 layout: cover
 class: concept
 ---
 
-<div class="eyebrow">Python พื้นฐาน · Session 06</div>
+<div class="eyebrow">Python พื้นฐาน · Session 07</div>
 
-# ไฟล์ ข้อผิดพลาด และโปรเจกต์ข้อมูล
+# ไฟล์และโปรเจกต์ข้อมูล
 
 จาก text file ไปสู่ NumPy และกราฟ
 
@@ -49,25 +50,6 @@ with open("scores.txt", encoding="utf-8") as file:
   <div class="card"><h3><code>strip()</code></h3><p>ลบ whitespace ต้นและท้าย</p></div>
   <div class="card"><h3><code>split(separator)</code></h3><p>แบ่งข้อความเป็นส่วนย่อย</p></div>
 </div>
-
----
-
-<div class="eyebrow">Expected failures</div>
-
-# จับ exception แบบเฉพาะ
-
-```python {monaco-run} {autorun:false}
-text = "82.5"
-
-try:
-    score = float(text)
-except ValueError:
-    print("Score must be numeric")
-else:
-    print(score)
-```
-
-<div class="takeaway"><p>ครอบ try เฉพาะคำสั่งที่คาดว่าอาจพลาด และไม่ใช้ bare <code>except</code> หรือ <code>except: pass</code></p></div>
 
 ---
 
@@ -227,10 +209,19 @@ plt.show()
 
 ---
 layout: center
-class: concept
+class: summary-slide
 ---
 
 # Course Structure
-<div class="pipeline">
-  <div>ตัวแปร</div><div>Function</div><div>เงื่อนไข</div><div>Collections</div><div>Loop</div><div>ข้อมูลและกราฟ</div>
+
+<div class="summary-map summary-map-7">
+  <div class="summary-step"><span>01</span><strong>Values</strong><small>ชนิดข้อมูล ตัวแปร และ expression</small></div>
+  <div class="summary-step"><span>02</span><strong>Functions</strong><small>แบ่งงานเป็นหน่วยที่เรียกซ้ำได้</small></div>
+  <div class="summary-step"><span>03</span><strong>Decisions</strong><small>เลือกเส้นทางจากเงื่อนไข</small></div>
+  <div class="summary-step"><span>04</span><strong>Exceptions</strong><small>แยกและจัดการ failure path</small></div>
+  <div class="summary-step"><span>05</span><strong>Collections</strong><small>จัดข้อมูลหลายค่าให้มีโครงสร้าง</small></div>
+  <div class="summary-step"><span>06</span><strong>Iteration</strong><small>ประมวลผลข้อมูลทีละรายการ</small></div>
+  <div class="summary-step"><span>07</span><strong>Data Product</strong><small>อ่าน ตรวจ คำนวณ และสื่อสารด้วยกราฟ</small></div>
 </div>
+
+<div class="summary-result"><span>COURSE MODEL</span> <code>data → logic → insight</code> <span class="summary-copy">= จากข้อมูลดิบสู่คำตอบที่อธิบายได้</span></div>

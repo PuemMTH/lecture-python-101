@@ -1,6 +1,6 @@
 ---
 theme: geist
-colorSchema: auto
+colorSchema: light
 title: Boolean และเงื่อนไข
 author: Puem
 transition: fade
@@ -8,6 +8,7 @@ lineNumbers: true
 monaco: true
 htmlAttrs:
   lang: th
+routeAlias: conditions
 layout: cover
 class: concept
 ---
@@ -130,12 +131,79 @@ elif score >= 70:
 ```
 
 ---
-layout: center
-class: concept
+
+<div class="eyebrow">Compound conditions</div>
+
+# แยกเงื่อนไขซับซ้อนเป็น Boolean ที่ตั้งชื่อได้
+
+```python {monaco-run} {autorun:false}
+score = 86
+attendance = 92
+family_income = 18_000
+has_activity = True
+
+academic_ok = score >= 80 and attendance >= 80
+needs_support = family_income <= 20_000
+has_merit = score >= 90 or has_activity
+eligible = academic_ok and (needs_support or has_merit)
+
+print("eligible:", eligible)
+```
+
+<div class="takeaway"><p>ตั้งชื่อ subconditions ก่อนรวมด้วย <code>and</code>, <code>or</code>, <code>not</code> เพื่อลดวงเล็บซ้อนและตรวจทีละส่วนได้</p></div>
+
 ---
 
-# Session 3 สรุป
+<div class="eyebrow">Branch ordering</div>
 
-<div class="pipeline">
-  <div>Comparison</div><div>Boolean logic</div><div>Branch</div><div>Validation</div>
+# Validate → Special Case → General Case → Fallback
+
+```python {monaco-run} {autorun:false}
+age = 68
+is_member = True
+is_weekend = False
+
+if age < 0:
+    price = None
+elif age < 6:
+    price = 0
+elif age >= 60 and is_member:
+    price = 40
+elif age >= 60 or is_member:
+    price = 60
+else:
+    price = 100
+
+if price is None:
+    print("Invalid age")
+else:
+    print(f"Ticket: {price} baht")
+```
+
+<div class="takeaway"><p>วางกรณีที่เฉพาะกว่าไว้ก่อน เพราะ Python เลือก branch แรกที่เป็นจริง</p></div>
+
+---
+layout: center
+class: summary-slide
+---
+
+<div class="eyebrow">Session 03 · Recap</div>
+
+# จากเงื่อนไขจริง–เท็จ<br>สู่การตัดสินใจของโปรแกรม
+
+<div class="summary-map">
+  <div class="summary-step">
+    <span>01</span><strong>Comparison</strong><small>เปรียบเทียบค่าให้ได้ Boolean</small>
+  </div>
+  <div class="summary-step">
+    <span>02</span><strong>Boolean Logic</strong><small>รวมเงื่อนไขด้วย and, or และ not</small>
+  </div>
+  <div class="summary-step">
+    <span>03</span><strong>Branch</strong><small>เลือกเส้นทางด้วย if, elif และ else</small>
+  </div>
+  <div class="summary-step">
+    <span>04</span><strong>Validation</strong><small>กันข้อมูลผิดก่อนเริ่มคำนวณ</small>
 </div>
+</div>
+
+<div class="summary-result"><span>MENTAL MODEL</span> <code>condition → branch</code> <span class="summary-copy">= ข้อมูลเป็นตัวกำหนดเส้นทางของโปรแกรม</span></div>

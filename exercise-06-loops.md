@@ -3,9 +3,9 @@ layout: default
 class: ''
 ---
 
-<div class="eyebrow">IPO Gate 5A · ส่งก่อนเรียน Session 06</div>
+<div class="eyebrow">IPO Gate 6A · ส่งก่อนเรียน Session 07</div>
 
-# ด่าน 5A: สรุปคะแนน
+# ด่าน 6A: สรุปคะแนน
 
 โปรแกรมรับคะแนนทีละค่าไปเรื่อย ๆ จนผู้ใช้กรอก `-1` แล้วแสดง **จำนวนคะแนน ผลรวม ค่าเฉลี่ย และจำนวนผู้ผ่านเกณฑ์ 50 คะแนน**
 
@@ -14,4 +14,4 @@ class: ''
   <div class="card"><h3>งานที่ต้องส่ง</h3><ul><li>เขียน Input · Process · Output</li><li>ระบุ accumulator และ counter</li><li>ทดสอบกรณีปกติ ค่าผิดช่วง และไม่มีคะแนน</li></ul></div>
 </div>
 
-<div class="lab"><p>ส่ง IPO ก่อนเขียน code · ผ่านแล้วจึงทำด่าน 5B</p></div>
+<div class="lab"><p>ส่ง IPO ก่อนเขียน code · ผ่านแล้วจึงทำด่าน 6B</p></div>
