@@ -156,7 +156,7 @@ print("eligible:", eligible)
 
 <div class="eyebrow">Branch ordering</div>
 
-# Validate → Special Case → General Case → Fallback
+<div class="">Validate → Special Case → General Case → Fallback</div>
 
 ```python {monaco-run} {autorun:false}
 age = 68
@@ -179,8 +179,6 @@ if price is None:
 else:
     print(f"Ticket: {price} baht")
 ```
-
-<div class="takeaway"><p>วางกรณีที่เฉพาะกว่าไว้ก่อน เพราะ Python เลือก branch แรกที่เป็นจริง</p></div>
 
 ---
 layout: center

@@ -161,8 +161,6 @@ except ValueError:
 print(f"Score: {score}")
 ```
 
-<div class="takeaway"><p><code>0</code> = สำเร็จ · ค่าที่ไม่ใช่ศูนย์ = ล้มเหลว · ไม่มี <code>os.exit()</code></p></div>
-
 ---
 
 <div class="eyebrow">Cleanup guarantee</div>
