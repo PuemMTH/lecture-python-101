@@ -1,0 +1,20 @@
+diff --git a/setup/shiki.ts b/setup/shiki.ts
+index 4461418363c00b917d5169af60a8d447d5b10de3..d2327420e749937f7a5672e69ce56d3f8a24f228 100644
+--- a/setup/shiki.ts
++++ b/setup/shiki.ts
+@@ -1,10 +1,12 @@
+ import { defineShikiSetup } from '@slidev/types'
++import dark from './shiki/dark.json'
++import light from './shiki/light.json'
+ 
+-export default defineShikiSetup(async({ loadTheme }) => {
++export default defineShikiSetup(() => {
+   return {
+     theme: {
+-      dark: await loadTheme(require.resolve('./shiki/dark.json')),
+-      light: await loadTheme(require.resolve('./shiki/light.json')),
++      dark,
++      light,
+     },
+   }
+ })

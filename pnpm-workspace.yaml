@@ -1,0 +1,19 @@
+packages:
+  - .
+
+overrides:
+  '@vue/compiler-core': 3.5.39
+  '@vue/compiler-dom': 3.5.39
+  '@vue/compiler-sfc': 3.5.39
+  '@vue/compiler-ssr': 3.5.39
+  '@vue/reactivity': 3.5.39
+  '@vue/runtime-core': 3.5.39
+  '@vue/runtime-dom': 3.5.39
+  '@vue/server-renderer': 3.5.39
+  '@vue/shared': 3.5.39
+  caniuse-lite: 1.0.30001805
+  vite: 8.1.4
+  vue: 3.5.39
+
+patchedDependencies:
+  slidev-theme-geist@0.8.1: patches/slidev-theme-geist@0.8.1.patch

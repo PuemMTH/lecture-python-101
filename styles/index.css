@@ -1,0 +1,145 @@
+.slidev-layout {
+  font-family: "Noto Sans Thai", Thonburi, "Sukhumvit Set", system-ui, sans-serif;
+  padding: 2.1rem 3rem;
+  font-size: 1.06rem;
+  text-align: left !important;
+}
+
+.slidev-layout.concept { text-align: center !important; }
+.slidev-layout.concept h1 { font-size: 5rem; line-height: 1; }
+.slidev-layout h1 { font-size: 2.45rem; font-weight: 800; line-height: 1.12; margin-bottom: 1rem; }
+.slidev-page > .cover { box-sizing: border-box; padding: 2.1rem 3rem; }
+.slidev-page > .cover h1 { font-size: 3.6rem; line-height: 1.08; max-width: 100%; }
+.slidev-layout p,
+.slidev-layout li { line-height: 1.55; }
+
+.eyebrow {
+  color: var(--slidev-theme-primary);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+
+.grid2,
+.grid3,
+.grid4 {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.card,
+.activity,
+.quiz,
+.lab,
+.takeaway,
+.pipeline > div {
+  background: color-mix(in srgb, currentColor 7%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.card h3 { margin: 0 0 0.4rem; }
+.card p,
+.card li { font-size: 0.98rem; line-height: 1.45; }
+.card ul,
+.card ol { margin: 0.35rem 0 0; padding-left: 1.25rem; }
+
+.big-number {
+  color: var(--slidev-theme-primary);
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pipeline {
+  display: grid;
+  gap: 0.55rem;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  margin-top: 1.4rem;
+}
+
+.pipeline > div {
+  align-items: center;
+  display: flex;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 86px;
+  min-width: 0;
+  position: relative;
+  text-align: center;
+}
+
+.pipeline > div:not(:last-child)::after {
+  color: var(--slidev-theme-primary);
+  content: "→";
+  font-size: 1.35rem;
+  position: absolute;
+  right: -0.48rem;
+}
+
+.activity,
+.quiz,
+.lab,
+.takeaway { border-left: 6px solid var(--slidev-theme-primary); margin-top: 1rem; }
+
+.activity::before,
+.quiz::before,
+.lab::before,
+.takeaway::before {
+  color: var(--slidev-theme-primary);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.activity::before { content: "PREDICT → RUN → EXPLAIN"; }
+.quiz::before { content: "CHECKPOINT QUIZ"; }
+.lab::before { content: "IN-CLASS LAB"; }
+.takeaway::before { content: "KEY TAKEAWAY"; }
+.activity p,
+.quiz p,
+.lab p,
+.takeaway p { font-size: 1rem; margin: 0.2rem 0; }
+
+.compact-table { border-collapse: collapse; font-size: 0.96rem; margin-top: 0.8rem; width: 100%; }
+.compact-table th,
+.compact-table td { border-bottom: 1px solid currentColor; padding: 0.48rem 0.6rem; text-align: left; vertical-align: top; }
+.compact-table th { font-size: 0.82rem; text-transform: uppercase; }
+.trace td:nth-child(n+2),
+.trace th:nth-child(n+2) { text-align: center; }
+
+.pill { background: color-mix(in srgb, currentColor 12%, transparent); border-radius: 999px; display: inline-block; padding: 0.22rem 0.55rem; }
+.answer { border-top: 1px dashed currentColor; font-size: 0.92rem; margin-top: 0.7rem; padding-top: 0.55rem; }
+.formula { font-family: monospace; font-size: 1.55rem; font-weight: 800; margin: 1.25rem auto; text-align: center; }
+.muted { opacity: 0.7; }
+.center { text-align: center; }
+
+.slidev-layout pre,
+.slidev-layout pre code,
+.slidev-code-wrapper,
+.monaco-editor .view-lines,
+.monaco-editor .view-line,
+.slidev-runner-output { text-align: left !important; }
+
+.slidev-code-wrapper { max-height: 330px; }
+.slidev-code { font-size: 0.98rem !important; }
+.monaco-editor { border-radius: 10px; }
+.slidev-runner-output { font-family: monospace; min-height: 2.5rem; padding: 0.55rem 0.75rem; }
+.slidev-runner-output .output-line,
+.slidev-runner-output .output-line span { color: inherit !important; white-space: pre-wrap; }
+
+@media (max-width: 900px) {
+  .slidev-layout { padding: 1.5rem 2rem; }
+  .slidev-page > .cover { padding: 1.5rem 2rem; }
+  .slidev-layout.concept h1 { font-size: 4rem; }
+}
