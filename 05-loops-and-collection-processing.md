@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 4 — Loop
+title: Loop และการประมวลผล Collection
 author: Puem
 transition: fade
 lineNumbers: true
@@ -12,11 +12,11 @@ layout: cover
 class: concept
 ---
 
-<div class="eyebrow">Python พื้นฐาน · Session 04</div>
+<div class="eyebrow">Python พื้นฐาน · Session 05</div>
 
-# Loop
+# Loop และการประมวลผล Collection
 
-ทำซ้ำอย่างมีจุดหยุด
+ทำซ้ำอย่างมีจุดหยุด และเปลี่ยนข้อมูลเป็นคำตอบ
 
 ---
 
@@ -73,6 +73,23 @@ for index, value in enumerate([10, 20, 30]):
 
 ---
 
+<div class="eyebrow">Dictionary iteration</div>
+
+# `.items()` ให้ทั้ง key และ value
+
+```python {monaco-run} {autorun:false}
+score_by_name = {
+    "Mali": 82,
+    "Niran": 47,
+    "Ploy": 75,
+}
+
+for name, score in score_by_name.items():
+    print(name, score)
+```
+
+---
+
 <div class="eyebrow">Search</div>
 
 # Linear search: พบแล้วหยุดได้
@@ -89,6 +106,42 @@ print(find("Hello", "x"))
 ```
 
 <div class="takeaway"><p>ถ้าสนใจเพียงว่าพบหรือไม่ ใช้ <code>target in text</code></p></div>
+
+---
+
+<div class="eyebrow">Transform and filter</div>
+
+# List comprehension
+
+```python {monaco-run} {autorun:false}
+scores = [72, 88, 41, 95, 67]
+passed_scores = [score for score in scores if score >= 50]
+
+celsius = [0, 20, 30, 100]
+fahrenheit = [temp * 9 / 5 + 32 for temp in celsius]
+
+print(passed_scores)
+print(fahrenheit)
+```
+
+<div class="takeaway"><p>เหมาะเมื่อ expression และ condition สั้นพอที่จะอ่านได้ในบรรทัดเดียว</p></div>
+
+---
+
+<div class="eyebrow">Comprehension + aggregate</div>
+
+# สร้างลำดับหรือรวมผลได้ตรงโจทย์
+
+```python {monaco-run} {autorun:false}
+squares = [number**2 for number in range(1, 11)]
+series_total = sum(
+    number**2 + 2 * number + 1
+    for number in range(1, 11)
+)
+
+print(squares)
+print(series_total)
+```
 
 ---
 
@@ -193,12 +246,39 @@ print(f"Passed: {passed_count}")
 ```
 
 ---
+
+<div class="eyebrow">Collection processing</div>
+
+# ประมวลผลข้อมูลนักเรียน
+
+```python {monaco-run} {autorun:false}
+students = [
+    {"id": "S01", "name": "Mali", "score": 82},
+    {"id": "S02", "name": "Niran", "score": 47},
+    {"id": "S03", "name": "Ploy", "score": 75},
+]
+
+passed_names = [
+    student["name"]
+    for student in students
+    if student["score"] >= 50
+]
+score_by_id = {
+    student["id"]: student["score"]
+    for student in students
+}
+
+print(passed_names)
+print(score_by_id)
+```
+
+---
 layout: center
 class: concept
 ---
 
-# Session 4 สรุป
+# Session 5 สรุป
 
 <div class="pipeline">
-  <div><code>for</code></div><div><code>while</code></div><div>State update</div><div>Stop condition</div>
+  <div><code>for</code></div><div><code>while</code></div><div>Comprehension</div><div>Aggregate</div>
 </div>

@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 5 — List และ Dictionary
+title: List และ Dictionary
 author: Puem
 transition: fade
 lineNumbers: true
@@ -12,7 +12,7 @@ layout: cover
 class: concept
 ---
 
-<div class="eyebrow">Python พื้นฐาน · Session 05</div>
+<div class="eyebrow">Python พื้นฐาน · Session 04</div>
 
 # List และ Dictionary
 
@@ -28,7 +28,7 @@ class: concept
 empty = []
 mixed = [8, 2.1, "Hello", True]
 letters = list("Hello")
-odd_numbers = list(range(1, 10, 2))
+odd_numbers = [1, 3, 5, 7, 9]
 
 print(letters)
 print(odd_numbers)
@@ -58,11 +58,10 @@ print("removed:", removed)
 
 <div class="eyebrow">Common data work</div>
 
-# Search · Filter · Aggregate
+# Search · Aggregate
 
-<div class="grid3">
+<div class="grid2">
   <div class="card"><h3>Search</h3><p>หา value หรือดูว่าพบหรือไม่</p></div>
-  <div class="card"><h3>Filter</h3><p>เลือกค่าที่ผ่านเงื่อนไข</p></div>
   <div class="card"><h3>Aggregate</h3><p>รวมหลายค่าเป็นผลเดียว</p></div>
 </div>
 
@@ -70,42 +69,6 @@ print("removed:", removed)
 scores = [72, 88, 41, 95, 67]
 print(88 in scores)
 print(len(scores), sum(scores), min(scores), max(scores))
-```
-
----
-
-<div class="eyebrow">Transform and filter</div>
-
-# List comprehension
-
-```python {monaco-run} {autorun:false}
-scores = [72, 88, 41, 95, 67]
-passed_scores = [score for score in scores if score >= 50]
-
-celsius = [0, 20, 30, 100]
-fahrenheit = [temp * 9 / 5 + 32 for temp in celsius]
-
-print(passed_scores)
-print(fahrenheit)
-```
-
-<div class="takeaway"><p>เหมาะเมื่อ expression และ condition สั้นพอที่จะอ่านได้ในบรรทัดเดียว</p></div>
-
----
-
-<div class="eyebrow">Comprehension + aggregate</div>
-
-# สร้างลำดับหรือรวมผลได้ตรงโจทย์
-
-```python {monaco-run} {autorun:false}
-squares = [number**2 for number in range(1, 11)]
-series_total = sum(
-    number**2 + 2 * number + 1
-    for number in range(1, 11)
-)
-
-print(squares)
-print(series_total)
 ```
 
 ---
@@ -132,23 +95,6 @@ print(student.get("email"))
 
 ---
 
-<div class="eyebrow">Iteration</div>
-
-# `.items()` ให้ทั้ง key และ value
-
-```python {monaco-run} {autorun:false}
-score_by_name = {
-    "Mali": 82,
-    "Niran": 47,
-    "Ploy": 75,
-}
-
-for name, score in score_by_name.items():
-    print(name, score)
-```
-
----
-
 <div class="eyebrow">Records</div>
 
 # Dictionary หนึ่งตัวแทน record หนึ่งรายการ
@@ -164,39 +110,12 @@ students = [
 <div class="takeaway"><p>ตกลงชื่อ fields และ type ของแต่ละ value ให้เหมือนกันทุก record</p></div>
 
 ---
-
-<div class="eyebrow">Putting it together</div>
-
-# ประมวลผลข้อมูลนักเรียน
-
-```python {monaco-run} {autorun:false}
-students = [
-    {"id": "S01", "name": "Mali", "score": 82},
-    {"id": "S02", "name": "Niran", "score": 47},
-    {"id": "S03", "name": "Ploy", "score": 75},
-]
-
-passed_names = [
-    student["name"]
-    for student in students
-    if student["score"] >= 50
-]
-score_by_id = {
-    student["id"]: student["score"]
-    for student in students
-}
-
-print(passed_names)
-print(score_by_id)
-```
-
----
 layout: center
 class: concept
 ---
 
-# Session 5 สรุป
+# Session 4 สรุป
 
 <div class="pipeline">
-  <div>List</div><div>Comprehension</div><div>Dictionary</div><div>Records</div>
+  <div>List</div><div>Mutation</div><div>Dictionary</div><div>Records</div>
 </div>

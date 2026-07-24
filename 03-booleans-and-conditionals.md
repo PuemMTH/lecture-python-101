@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 3 — Boolean และเงื่อนไข
+title: Boolean และเงื่อนไข
 author: Puem
 transition: fade
 lineNumbers: true
@@ -128,9 +128,6 @@ if score >= 80:
 elif score >= 70:
     grade = "B"
 ```
-
----
-
 
 ---
 layout: center

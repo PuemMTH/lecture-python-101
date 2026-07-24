@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 6 — ไฟล์ ข้อผิดพลาด และโปรเจกต์ข้อมูล
+title: ไฟล์ ข้อผิดพลาด และโปรเจกต์ข้อมูล
 author: Puem
 transition: fade
 lineNumbers: true
@@ -232,5 +232,5 @@ class: concept
 
 # Course Structure
 <div class="pipeline">
-  <div>ตัวแปร</div><div>Function</div><div>เงื่อนไข</div><div>Loop</div><div>Collections</div><div>ข้อมูลและกราฟ</div>
+  <div>ตัวแปร</div><div>Function</div><div>เงื่อนไข</div><div>Collections</div><div>Loop</div><div>ข้อมูลและกราฟ</div>
 </div>

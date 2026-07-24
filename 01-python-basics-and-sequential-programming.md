@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 1 — Python เบื้องต้นและโปรแกรมแบบลำดับ
+title: Python เบื้องต้นและโปรแกรมแบบลำดับ
 author: Puem
 transition: fade
 lineNumbers: true

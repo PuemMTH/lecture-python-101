@@ -1,7 +1,7 @@
 ---
 theme: geist
 colorSchema: auto
-title: Session 2 — Function
+title: Function
 author: Puem
 transition: fade
 lineNumbers: true
